@@ -8,6 +8,20 @@
   </head>
   <body>
     <div id="D_geral">
+      <div class="circle-button" id="toggleButton" onclick="toggleMusic()">
+        Stop
+      </div>
+      <audio id="backgroundMusic" src="./1984_ Mauve.mp3" loop></audio>
+
+      <!-- Popup -->
+      <div id="overlay">
+        <div id="popup">
+          <h2>Quer ouvir música?</h2>
+          <button id="btnSim">Sim, quero!</button>
+          <button id="btnNao">Não, obrigado</button>
+        </div>
+      </div>
+
       <div class="container">
         <div class="foto-grande">
           <img src="./img/ana.png" alt="Foto grande" />
@@ -139,6 +153,7 @@
 
           <h2 class="titulos_confirma">Endereço</h2>
           <a
+            target="_blank"
             href="https://calendar.app.google/gND7aQJcC1kjksEb8"
             class="link-button"
             download="evento.ics"

@@ -1,3 +1,4 @@
+// -------------------- CONTADOR --------------------
 const targetDate = new Date("2025-07-19T19:30:00");
 const daysElement = document.getElementById("days");
 const hoursElement = document.getElementById("hours");
@@ -31,6 +32,7 @@ function updateCountdown() {
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
+// -------------------- MODAL DE CONFIRMAÇÃO --------------------
 const modal = document.getElementById("modal");
 
 function openModal() {
@@ -42,12 +44,12 @@ function closeModal() {
 }
 
 function sendMessage() {
-  const name = document.getElementById("name").value;
+  const name = document.getElementById("name").value.trim();
   const checkboxes = document.querySelectorAll(
     'input[name="confirmation"]:checked'
   );
   const selectedOption = Array.from(checkboxes)
-    .map((checkbox) => checkbox.value)
+    .map((cb) => cb.value)
     .join(", ");
 
   if (!name || !selectedOption) {
@@ -56,9 +58,8 @@ function sendMessage() {
   }
 
   const message = `Olá, confirmo minha presença na Festa 15 Anos Ana Mara!\nNome: ${name}\nConfirmação: ${selectedOption}`;
-  const phone = "+555581202442"; // Substitua pelo número do WhatsApp no formato internacional
+  const phone = "+555581202442"; // Número do WhatsApp no formato internacional
 
-  // Abrir WhatsApp com a mensagem preenchida
   const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
     message
   )}`;
@@ -66,3 +67,39 @@ function sendMessage() {
 
   closeModal();
 }
+
+// -------------------- POPUP DE MÚSICA --------------------
+const music = document.getElementById("backgroundMusic");
+const toggleButton = document.getElementById("toggleButton");
+const overlay = document.getElementById("overlay");
+const btnSim = document.getElementById("btnSim");
+const btnNao = document.getElementById("btnNao");
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    toggleButton.textContent = "Stop";
+  } else {
+    music.pause();
+    toggleButton.textContent = "Play";
+  }
+}
+
+btnSim.addEventListener("click", () => {
+  music.play();
+  toggleButton.textContent = "Stop";
+  overlay.classList.remove("show");
+});
+
+btnNao.addEventListener("click", () => {
+  music.pause();
+  toggleButton.textContent = "Play";
+  overlay.classList.remove("show");
+});
+
+// Exibe o popup na carga da página
+window.addEventListener("load", () => {
+  overlay.classList.add("show");
+  music.pause();
+  toggleButton.textContent = "Play";
+});

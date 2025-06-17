@@ -306,6 +306,81 @@ button:hover {
   background-color: #218838;
 }
 
+.circle-button {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(40, 167, 69, 0.8); /* Verde com transparência */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.circle-button:hover {
+  background-color: rgba(33, 136, 56, 0.9);
+  transform: scale(1.1);
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Esconde por padrão */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+#overlay.show {
+  display: flex; /* Mostra quando tem a classe show */
+}
+
+/* Popup */
+#popup {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+#popup button {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#btnSim {
+  background-color: #28a745;
+  color: white;
+}
+#btnSim:hover {
+  background-color: #218838;
+}
+#btnNao {
+  background-color: #dc3545;
+  color: white;
+}
+#btnNao:hover {
+  background-color: #c82333;
+}
+
 /* Responsividade: diminui o tamanho dos cantos em telas menores */
 @media (max-width: 600px) {
   .corner {
