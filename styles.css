@@ -190,7 +190,7 @@ body {
 
 .svg-top, .svg-bottom {
   height: 0vh; /* Altura dos elementos SVG */
-  background-image: url('/borda.svg'); /* Caminho para o SVG */
+  background-image: url('./img/borda.svg'); /* Caminho para o SVG */
   background-repeat: repeat-x; /* Repetir o SVG horizontalmente */
   background-size: 15vh auto; /* Ajustar a altura do SVG ao container */
   overflow: hidden; /* Ocultar qualquer sobra */
