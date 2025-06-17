@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --fuente-1: "PT Serif", serif;
+    --fuente-2: "Poppins", sans-serif;
+    --grosor-fuente-light: 300;
+    --grosor-fuente-regular: 400;
+    --grosor-fuente-semi-bold: 600;
+    --grosor-fuente-bold: 700;
+
+  --color-pallete-1: #15403F;
+  --color-pallete-2: #E4ACA8;
+  --color-pallete-3: #FDE2E1;
+  --color-pallete-4: #FFF2F3;
+  --color-pallete-5: #DFB6B4;
+
+  --rosa-claro: #fde2e1;
+  --rosa-forte: #e59191;
+  --verde-escuro: #10200f;
+  --verde-claro: #b2d8b2;
+  --braco: #ffffff;
+  --preto: #000000;
+  --cinza: #666;
+  --rosa: #dfb6b4;
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color-pallete-5);
+    color: var(--color-pallete-1);
+}
+
+.number_conter{
+  display: inline-block;
+    width: 100%;
+    color: var(--rosa-forte);
+    font-family: var(--fuente-1);
+    font-weight: var(--grosor-fuente-bold);
+    font-size: 45px;
+    line-height: 45px;
+}
+
+#D_geral{
+  height: 100vh;
+  width: 90vw;
+ 
+}
+.container {
+  background: var(--rosa-claro);
+  box-shadow: 0 4px 24px var(--preto);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+}
+
+.foto-grande img {
+  height: 600px;
+  object-fit: cover;
+}
+
+
+
+.texto h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.texto h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.texto h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.texto p {
+  margin-top: 12px;
+  font-size: 1rem;
+  max-width: 400px;
+}
+
+.texto {
+  position: relative;
+  background: var(--rosa-claro);
+  padding: 32px 24px;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Contador regresivo */
+
+.countdown-container {
+    text-align: center;
+    background: var(--braco);
+    padding: 20px 0 20px 0;
+    box-shadow: 0 4px 10px var(--preto);
+}
+
+#T_Contador {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 10vh;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10vh;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+}
+
+.time-box span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.time-box p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: var(--color-pallete-1);
+}
+
+.borda-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  padding: 32px 24px;
+  background: var(--rosa-claro);
+  overflow: visible;
+  display: flex; /* Adiciona Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.corner {
+  position: absolute;
+  width: auto;
+  height: 35%;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.5; /* opaco */
+}
+
+/* Canto superior esquerdo */
+.corner-top-left {
+    top: -5%;
+    left: -5%;
+    
+}
+
+/* Canto superior direito */
+.corner-top-right {
+  top: -5%;
+  right: -5%;
+  
+}
+
+/* Canto inferior esquerdo */
+.corner-bottom-left {
+  bottom: -5%;
+  left: -5%;
+
+}
+
+/* Canto inferior direito */
+.corner-bottom-right {
+  bottom: -5%;
+  right: -5%;
+  
+}
+
+.svg-top, .svg-bottom {
+  height: 0vh; /* Altura dos elementos SVG */
+  background-image: url('/borda.svg'); /* Caminho para o SVG */
+  background-repeat: repeat-x; /* Repetir o SVG horizontalmente */
+  background-size: 15vh auto; /* Ajustar a altura do SVG ao container */
+  overflow: hidden; /* Ocultar qualquer sobra */
+  padding: 10px 0 10px 0
+}
+
+/* Responsividade: diminui o tamanho dos cantos em telas menores */
+@media (max-width: 600px) {
+  .corner {
+    width: auto;
+    height: 18vh;
+  }
+
+  #D_geral{
+    height: 100vh;
+    width: 100vw;
+  }
+  .borda-container{
+    width: 70vw;
+    height: 90vw;
+
+  }
+  .container {
+      flex-direction: column;
+  }
+  .foto-grande img {
+      height: 300px;
+  }
+ };
