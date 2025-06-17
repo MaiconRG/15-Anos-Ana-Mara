@@ -1,0 +1,11 @@
+PRODID:-//Ana Mara//Festa 15 Anos//PT-BR
+BEGIN:VEVENT
+UID:mr.gretschmann@gmail.com
+DTSTAMP:20250617T190000Z
+DTSTART:20250719T190000Z
+DTEND:20250719T230000Z
+SUMMARY:Festa 15 Anos Ana Mara
+DESCRIPTION:Venha celebrar os 15 anos de Ana Mara! Confira o local no link: https://maps.app.goo.gl/P2tTaHkFZXZEvPpCA
+LOCATION:https://maps.app.goo.gl/P2tTaHkFZXZEvPpCA
+END:VEVENT
+END:VCALENDAR
