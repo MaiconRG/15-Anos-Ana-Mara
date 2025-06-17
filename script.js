@@ -30,3 +30,39 @@ function updateCountdown() {
 
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+const modal = document.getElementById("modal");
+
+function openModal() {
+  modal.classList.add("show");
+}
+
+function closeModal() {
+  modal.classList.remove("show");
+}
+
+function sendMessage() {
+  const name = document.getElementById("name").value;
+  const checkboxes = document.querySelectorAll(
+    'input[name="confirmation"]:checked'
+  );
+  const selectedOption = Array.from(checkboxes)
+    .map((checkbox) => checkbox.value)
+    .join(", ");
+
+  if (!name || !selectedOption) {
+    alert("Por favor, preencha todas as informações.");
+    return;
+  }
+
+  const message = `Olá, confirmo minha presença na Festa 15 Anos Ana Mara!\nNome: ${name}\nConfirmação: ${selectedOption}`;
+  const phone = "+555581202442"; // Substitua pelo número do WhatsApp no formato internacional
+
+  // Abrir WhatsApp com a mensagem preenchida
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+    message
+  )}`;
+  window.open(whatsappLink, "_blank");
+
+  closeModal();
+}

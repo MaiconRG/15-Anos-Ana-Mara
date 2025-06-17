@@ -100,13 +100,43 @@
           <h3 class="titulos_confirma_3">Sábado, 19 de Julho de 2025 - 19h</h3>
           <h2 class="titulos_confirma">Local</h2>
           <h3 class="titulos_confirma_3">Sitio das Flores</h3>
-          <a
-            target="_blank"
-            href="https://maps.app.goo.gl/jQUP6e9xaWsfpj9G7"
-            class="link-button"
-          >
-            Confirmar Presença!
-          </a>
+
+          <button class="link-button" onclick="openModal()">
+            Confirmar Presença
+          </button>
+
+          <div class="modal-overlay" id="modal">
+            <div class="modal">
+              <h1>Você irá à festa?</h1>
+              <form id="confirmationForm" autocomplete="off">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="confirmation"
+                    value="Sim! Eu confirmo"
+                  />
+                  Sim! Eu confirmo
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="confirmation"
+                    value="Não posso :("
+                  />
+                  Não posso :(
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nome completo"
+                  required
+                />
+                <button type="button" onclick="sendMessage()">Enviar</button>
+              </form>
+            </div>
+          </div>
+
           <h2 class="titulos_confirma">Endereço</h2>
           <a
             href="https://calendar.app.google/gND7aQJcC1kjksEb8"
