@@ -485,6 +485,14 @@ input[type="text"] {
   height: auto;
 }
 
+.presentes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 40vh;
+}
+
 /* Responsividade: diminui o tamanho dos cantos em telas menores */
 @media (max-width: 600px) {
   .corner {
