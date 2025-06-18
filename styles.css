@@ -480,6 +480,11 @@ input[type="text"] {
   color: #fde2e1; /* Cor ao passar o mouse */
 }
 
+.coroa_baixa {
+  width: 5vw;
+  height: auto;
+}
+
 /* Responsividade: diminui o tamanho dos cantos em telas menores */
 @media (max-width: 600px) {
   .corner {
@@ -495,6 +500,17 @@ input[type="text"] {
     width: 70vw;
     height: 90vw;
   }
+
+  .borda-modal {
+    width: 75vw;
+    height: 70vh;
+  }
+
+  #coroa_baixa {
+    width: 30vw;
+    height: auto;
+  }
+
   .container {
     flex-direction: column;
   }
@@ -510,5 +526,31 @@ input[type="text"] {
   .footer {
     font-size: 12px;
     padding: 15px 8px;
+  }
+
+  #popup {
+    background: var(--rosa-claro);
+    padding: 40px;
+    border-radius: 12px;
+    width: 90vw;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  #popup button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn_modal {
+    background-color: var(--rosa-forte);
+    color: white;
+    width: 30vw;
   }
 }
