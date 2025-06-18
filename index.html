@@ -8,8 +8,9 @@
   </head>
   <body>
     <div id="D_geral">
+      <!-- Player de musica-->
       <div class="circle-button" id="toggleButton" onclick="toggleMusic()">
-        Stop
+        <img class="palyer" src="./img/play-pause.svg" />
       </div>
       <audio id="backgroundMusic" src="./Glue Song.mp3" loop></audio>
 
@@ -49,8 +50,8 @@
             <h4>MEUS 15 ANOS</h4>
             <img src="./img/coroa baixa.svg" />
             <p>A música de fundo faz parte da experiência</p>
-            <button id="btnSim">Sim, quero!</button>
-            <button id="btnNao">Não, obrigado!</button>
+            <button class="btn_modal" id="btnSim">Sim, quero!</button>
+            <button class="btn_modal" id="btnNao">Não, obrigado!</button>
           </div>
         </div>
       </div>
@@ -208,8 +209,19 @@
         </div>
       </div>
       <div class="c_presentes">
+        <div class="presentes">
+          <h2 class="title_presentes">Sugestão de Presentes</h2>
+          <p class="texto_presentes">
+            Oi! Não sabe o que me dar de presente? Que tal algo bem fofinho na
+            cor rosa? 💕
+          </p>
+          <br />
+          <p class="texto_presentes">
+            E se ainda ficar na dúvida, um pix também me deixa super feliz! 🥰
+          </p>
+        </div>
         <div class="pix-container">
-          <h2>Faça seu pagamento via Pix</h2>
+          <h3>Faça seu pagamento via Pix</h3>
           <div class="qr-code">
             <img src="./img/QR_Code_Exemplo.png" alt="QR Code Pix" />
           </div>

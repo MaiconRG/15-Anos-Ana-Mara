@@ -74,26 +74,27 @@ const toggleButton = document.getElementById("toggleButton");
 const overlay = document.getElementById("overlay");
 const btnSim = document.getElementById("btnSim");
 const btnNao = document.getElementById("btnNao");
+const toggleImg = toggleButton.querySelector("img"); // Seleciona o <img> dentro do botão
 
 function toggleMusic() {
   if (music.paused) {
     music.play();
-    toggleButton.textContent = "Stop";
+    toggleImg.src = "./img/pause.svg"; // Caminho do ícone de pause
   } else {
     music.pause();
-    toggleButton.textContent = "Play";
+    toggleImg.src = "./img/play_pause.svg"; // Caminho do ícone de play
   }
 }
 
 btnSim.addEventListener("click", () => {
   music.play();
-  toggleButton.textContent = "Stop";
+  toggleImg.src = "./img/pause.svg";
   overlay.classList.remove("show");
 });
 
 btnNao.addEventListener("click", () => {
   music.pause();
-  toggleButton.textContent = "Play";
+  toggleImg.src = "./img/play_pause.svg";
   overlay.classList.remove("show");
 });
 
@@ -101,7 +102,7 @@ btnNao.addEventListener("click", () => {
 window.addEventListener("load", () => {
   overlay.classList.add("show");
   music.pause();
-  toggleButton.textContent = "Play";
+  toggleImg.src = "./img/play_pause.svg";
 });
 
 // -------------------- COPIAR CODIGO PIX --------------------

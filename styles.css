@@ -19,6 +19,7 @@
   --verde-escuro: #10200f;
   --verde-claro: #b2d8b2;
   --braco: #ffffff;
+  --braco-transparente: #ffffffd0;
   --preto: #000000;
   --cinza: #666;
   --rosa: #dfb6b4;
@@ -233,6 +234,7 @@ body {
 .link-button:hover {
   background-color: var(--color-pallete-2);
 }
+
 /* Modal form de confirmação de presença */
 .modal-overlay {
   position: fixed;
@@ -309,7 +311,7 @@ input[type="text"] {
 .circle-button {
   width: 70px;
   height: 70px;
-  background-color: rgba(40, 167, 69, 0.8); /* Verde com transparência */
+  background-color: var(--braco-transparente); /* Verde com transparência */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -327,7 +329,7 @@ input[type="text"] {
 }
 
 .circle-button:hover {
-  background-color: rgba(33, 136, 56, 0.9);
+  background-color: var(--color-pallete-4);
   transform: scale(1.1);
 }
 
@@ -350,7 +352,7 @@ input[type="text"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(83, 77, 77, 0.5);
   display: none; /* Esconde por padrão */
   justify-content: center;
   align-items: center;
@@ -363,13 +365,14 @@ input[type="text"] {
 
 /* Popup de boas vindas e solicitação da reprodução da musica */
 #popup {
-  background: #fff;
-  padding: 30px;
+  background: var(--rosa-claro);
+  padding: 40px;
   border-radius: 12px;
   max-width: 500px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
 #popup button {
   margin: 10px;
   padding: 12px 24px;
@@ -379,19 +382,15 @@ input[type="text"] {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-#btnSim {
-  background-color: #28a745;
+
+.btn_modal {
+  background-color: var(--rosa-forte);
   color: white;
+  width: 15vw;
 }
-#btnSim:hover {
-  background-color: #218838;
-}
-#btnNao {
-  background-color: #dc3545;
-  color: white;
-}
-#btnNao:hover {
-  background-color: #c82333;
+
+.btn_modal:hover {
+  background-color: var(--rosa);
 }
 
 /* Referente ao PIX */
@@ -507,5 +506,9 @@ input[type="text"] {
   .confirmacao {
     width: 70vw;
     margin-bottom: 5vh;
+  }
+  .footer {
+    font-size: 12px;
+    padding: 15px 8px;
   }
 }
