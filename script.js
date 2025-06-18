@@ -57,7 +57,7 @@ function sendMessage() {
     return;
   }
 
-  const message = `Olá, confirmo minha presença na Festa 15 Anos Ana Mara!\nNome: ${name}\nConfirmação: ${selectedOption}`;
+  const message = `Olá, Obrigado pelo convite para a festa 15 anos da Ana!\nNome: ${name}\nConfirmação: ${selectedOption}`;
   const phone = "+555581202442"; // Número do WhatsApp no formato internacional
 
   const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
@@ -102,4 +102,38 @@ window.addEventListener("load", () => {
   overlay.classList.add("show");
   music.pause();
   toggleButton.textContent = "Play";
+});
+
+// -------------------- COPIAR CODIGO PIX --------------------
+
+document.getElementById("copyButton").addEventListener("click", function () {
+  const pixCode = document.getElementById("pixCode").innerText;
+
+  // Copiar texto para a área de transferência
+  navigator.clipboard
+    .writeText(pixCode)
+    .then(() => {
+      const message = document.getElementById("copyMessage");
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 2000); // Mensagem desaparece após 2 segundos
+
+      // Redirecionar para o aplicativo ou página do banco
+      window.location.href = `pix://pagamento?chave=${encodeURIComponent(
+        pixCode
+      )}`;
+    })
+    .catch((err) => {
+      alert(
+        "Não foi possível copiar o código PIX. Por favor, tente manualmente."
+      );
+      console.error("Erro ao copiar o código PIX:", err);
+    });
+});
+
+// Exibir mensagem ao acessar "Termos de Uso"
+document.querySelector(".link-termos").addEventListener("click", function (e) {
+  e.preventDefault();
+  alert("Você será direcionado aos Termos de Uso em breve.");
 });

@@ -16,12 +16,44 @@
       <!-- Popup -->
       <div id="overlay">
         <div id="popup">
-          <h2>Quer ouvir música?</h2>
-          <button id="btnSim">Sim, quero!</button>
-          <button id="btnNao">Não, obrigado</button>
+          <div class="borda-modal">
+            <!-- Canto superior esquerdo -->
+            <img
+              src="./img/b_border SE.svg"
+              alt=""
+              class="corner corner-top-left"
+            />
+
+            <!-- Canto superior direito -->
+            <img
+              src="./img/b_border SD.svg"
+              alt=""
+              class="corner corner-top-right"
+            />
+
+            <!-- Canto inferior esquerdo -->
+            <img
+              src="./img/b_border IE.svg"
+              alt=""
+              class="corner corner-bottom-left"
+            />
+
+            <!-- Canto inferior direito -->
+            <img
+              src="./img/b_border ID.svg"
+              alt=""
+              class="corner corner-bottom-right"
+            />
+            <h3>Bem-vindo(a) ao convite da</h3>
+            <h1>Aninha</h1>
+            <h4>MEUS 15 ANOS</h4>
+            <img src="./img/coroa baixa.svg" />
+            <p>A música de fundo faz parte da experiência</p>
+            <button id="btnSim">Sim, quero!</button>
+            <button id="btnNao">Não, obrigado!</button>
+          </div>
         </div>
       </div>
-
       <div class="container">
         <div class="foto-grande">
           <img src="./img/ana.png" alt="Foto grande" />
@@ -64,8 +96,8 @@
               <div class="texto_aniversario">
                 <img src="./img/coroa.svg" alt="Coroa" class="coroa" />
                 <p>
-                  Convido você para comemorar comigo essa noite mágica,
-                  inesquecível e única!
+                  Convido você para comemorar comigo essa noite inesquecível e
+                  única!
                 </p>
                 <img
                   src="./img/coroa baixa.svg"
@@ -121,11 +153,11 @@
 
           <div class="modal-overlay" id="modal">
             <div class="modal">
-              <h1>Você irá à festa?</h1>
+              <h1 class="modal_titulo">Você irá à festa?</h1>
               <form id="confirmationForm" autocomplete="off">
                 <label>
                   <input
-                    type="checkbox"
+                    type="radio"
                     name="confirmation"
                     value="Sim! Eu confirmo"
                   />
@@ -133,7 +165,7 @@
                 </label>
                 <label>
                   <input
-                    type="checkbox"
+                    type="radio"
                     name="confirmation"
                     value="Não posso :("
                   />
@@ -146,7 +178,13 @@
                   placeholder="Nome completo"
                   required
                 />
-                <button type="button" onclick="sendMessage()">Enviar</button>
+                <button
+                  class="btn_enviar"
+                  type="button"
+                  onclick="sendMessage()"
+                >
+                  Enviar
+                </button>
               </form>
             </div>
           </div>
@@ -169,7 +207,32 @@
           </a>
         </div>
       </div>
+      <div class="c_presentes">
+        <div class="pix-container">
+          <h2>Faça seu pagamento via Pix</h2>
+          <div class="qr-code">
+            <img src="./img/QR_Code_Exemplo.png" alt="QR Code Pix" />
+          </div>
+          <div class="pix-code-container">
+            <span id="pixCode">SEU_CODIGO_PIX</span>
+            <button id="copyButton">Copiar</button>
+          </div>
+          <p id="copyMessage" style="display: none; color: green">
+            Código copiado!
+          </p>
+        </div>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; 2025 - Desenvolvido por Maicon Gretschmann. Todos os direitos
+          reservados.
+        </p>
+        <p>Entre em contato com o Desenvolvedor</p>
+        <a href="https://wa.me/5549984321985" target="_blank">WhatsApp</a>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

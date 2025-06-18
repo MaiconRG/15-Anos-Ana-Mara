@@ -233,7 +233,7 @@ body {
 .link-button:hover {
   background-color: var(--color-pallete-2);
 }
-
+/* Modal form de confirmação de presença */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -263,7 +263,7 @@ body {
   max-width: 400px;
 }
 
-h1 {
+.modal_titulo {
   font-size: 20px;
   margin-bottom: 20px;
   text-align: center;
@@ -289,7 +289,7 @@ input[type="text"] {
   font-size: 16px;
 }
 
-button {
+.btn_enviar {
   width: 100%;
   padding: 10px;
   background-color: #28a745;
@@ -302,7 +302,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-button:hover {
+.btn_enviar:hover {
   background-color: #218838;
 }
 
@@ -331,6 +331,19 @@ button:hover {
   transform: scale(1.1);
 }
 
+.borda-modal {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  padding: 32px 24px;
+  background: var(--rosa-claro);
+  overflow: visible;
+  display: flex; /* Adiciona Flexbox */
+  flex-direction: column;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
 #overlay {
   position: fixed;
   top: 0;
@@ -348,12 +361,12 @@ button:hover {
   display: flex; /* Mostra quando tem a classe show */
 }
 
-/* Popup */
+/* Popup de boas vindas e solicitação da reprodução da musica */
 #popup {
   background: #fff;
   padding: 30px;
   border-radius: 12px;
-  max-width: 320px;
+  max-width: 500px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -379,6 +392,93 @@ button:hover {
 }
 #btnNao:hover {
   background-color: #c82333;
+}
+
+/* Referente ao PIX */
+
+.pix-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.qr-code img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.pix-code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pix-code-container span {
+  font-size: 18px;
+  font-family: monospace;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pix-code-container button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pix-code-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #15403f00; /* Cor de fundo */
+  color: #ffffff; /* Cor do texto */
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li {
+  display: inline;
+}
+
+.footer-links a {
+  color: #e4aca8; /* Cor dos links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fde2e1; /* Cor ao passar o mouse */
 }
 
 /* Responsividade: diminui o tamanho dos cantos em telas menores */
