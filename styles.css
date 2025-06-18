@@ -480,8 +480,8 @@ input[type="text"] {
   color: #fde2e1; /* Cor ao passar o mouse */
 }
 
-.coroa_baixa {
-  width: 5vw;
+#coroa_baixa {
+  width: 10vw;
   height: auto;
 }
 
