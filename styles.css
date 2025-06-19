@@ -601,6 +601,9 @@ button,
     width: auto;
     height: 18vh;
   }
+  #titulo_festa {
+    font-size: 1.8rem;
+  }
 
   #D_geral {
     width: 100vw;
