@@ -45,12 +45,10 @@ function closeModal() {
 
 function sendMessage() {
   const name = document.getElementById("name").value.trim();
-  const checkboxes = document.querySelectorAll(
+  const selectedRadio = document.querySelector(
     'input[name="confirmation"]:checked'
   );
-  const selectedOption = Array.from(checkboxes)
-    .map((cb) => cb.value)
-    .join(", ");
+  const selectedOption = selectedRadio ? selectedRadio.value : "";
 
   if (!name || !selectedOption) {
     alert("Por favor, preencha todas as informações.");
@@ -131,10 +129,4 @@ document.getElementById("copyButton").addEventListener("click", function () {
       );
       console.error("Erro ao copiar o código PIX:", err);
     });
-});
-
-// Exibir mensagem ao acessar "Termos de Uso"
-document.querySelector(".link-termos").addEventListener("click", function (e) {
-  e.preventDefault();
-  alert("Você será direcionado aos Termos de Uso em breve.");
 });

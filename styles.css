@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap");
 
+/* Reset básico de estilos do navegador */
+/* filepath: /home/srgretschmann/Área de Trabalho/Ana Mara 15 Anos /styles.css */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --fuente-1: "PT Serif", serif;
   --fuente-2: "Poppins", sans-serif;
@@ -24,7 +34,7 @@
   --cinza: #666;
   --rosa: #dfb6b4;
 }
-/* styles.css */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -49,12 +59,11 @@ body {
 }
 
 #D_geral {
+  min-height: 100vh;
   width: 90vw;
-  background: var(--rosa-claro);
 }
 .container {
   background: var(--rosa-claro);
-  box-shadow: 0 4px 24px var(--preto);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -66,15 +75,14 @@ body {
   height: 40vw;
   object-fit: cover;
 }
+.texto h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
 
 .texto h2 {
   margin: 0;
   font-size: 1.5rem;
-}
-
-.texto h1 {
-  margin: 0;
-  font-size: 2.5rem;
 }
 
 .texto h3 {
@@ -102,7 +110,6 @@ body {
   text-align: center;
   background: var(--braco);
   padding: 20px 0 20px 0;
-  box-shadow: 0 4px 10px var(--preto);
 }
 
 #T_Contador {
@@ -205,7 +212,20 @@ body {
 .suporte_confimacao {
   display: flex;
   justify-content: center;
-  margin: 5vh 0 5vh 0;
+  padding: 10vh 0 10vh 0;
+  background: var(--color-pallete-3);
+}
+
+/* Padroniza tamanho dos botões e links na confirmação */
+.suporte_confimacao .link-button,
+.suporte_confimacao .btn_enviar {
+  width: 220px;
+  max-width: 90vw;
+  min-width: 140px;
+  display: inline-block;
+  text-align: center;
+  margin: 10px auto;
+  box-sizing: border-box;
 }
 
 .svg_festa {
@@ -396,13 +416,14 @@ input[type="text"] {
 /* Referente ao PIX */
 
 .pix-container {
+  display: block;
   text-align: center;
   padding: 20px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
   max-width: 400px;
-  margin: 0 auto;
+  margin: 6vh auto 6vh auto; /* margem superior e inferior aumentadas */
 }
 
 .qr-code img {
@@ -493,6 +514,80 @@ input[type="text"] {
   height: 40vh;
 }
 
+.c_presentes {
+  text-align: center;
+  background: var(--braco);
+  padding: 5vh 0 5vh 0;
+}
+
+/* Linha de pontos abaixo do título */
+.linha-pontos-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 0 0;
+}
+
+.linha-pontos {
+  display: flex;
+  gap: 6px;
+  max-width: 120px;
+}
+
+.ponto {
+  width: 8px;
+  height: 8px;
+  background: var(--rosa-forte);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Títulos principais */
+h1,
+.title_presentes,
+.modal_titulo {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  font-family: var(--fuente-1), serif;
+}
+
+/* Subtítulos */
+h2,
+.titulos_confirma {
+  font-size: clamp(1.3rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  font-family: var(--fuente-1), serif;
+}
+
+/* Títulos menores */
+h3,
+.titulos_confirma_3 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.3;
+  font-family: var(--fuente-2), sans-serif;
+}
+
+/* Parágrafos e textos gerais */
+p,
+.texto_presentes,
+label,
+input,
+span {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.5;
+  font-family: var(--fuente-2), sans-serif;
+}
+
+/* Botões e links */
+button,
+.link-button,
+.btn_modal,
+.btn_enviar {
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.2;
+  font-family: var(--fuente-2), sans-serif;
+}
+
 /* Responsividade: diminui o tamanho dos cantos em telas menores */
 @media (max-width: 600px) {
   .corner {
@@ -501,7 +596,6 @@ input[type="text"] {
   }
 
   #D_geral {
-    height: 100vh;
     width: 100vw;
   }
   .borda-container {
@@ -560,5 +654,39 @@ input[type="text"] {
     background-color: var(--rosa-forte);
     color: white;
     width: 30vw;
+  }
+
+  .circle-button {
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 10px;
+  }
+
+  h1,
+  .title_presentes,
+  .modal_titulo {
+    font-size: 2rem;
+  }
+  h2,
+  .titulos_confirma {
+    font-size: 1.3rem;
+  }
+  h3,
+  .titulos_confirma_3 {
+    font-size: 1.1rem;
+  }
+  p,
+  .texto_presentes,
+  label,
+  input,
+  span {
+    font-size: 1rem;
+  }
+  button,
+  .link-button,
+  .btn_modal,
+  .btn_enviar {
+    font-size: 1rem;
   }
 }

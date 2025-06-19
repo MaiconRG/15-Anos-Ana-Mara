@@ -10,7 +10,7 @@
     <div id="D_geral">
       <!-- Player de musica-->
       <div class="circle-button" id="toggleButton" onclick="toggleMusic()">
-        <img class="palyer" src="./img/play-pause.svg" />
+        <img class="palyer" src="./img/play_pause.svg" />
       </div>
       <audio id="backgroundMusic" src="./Glue Song.mp3" loop></audio>
 
@@ -91,7 +91,21 @@
 
             <!-- Conteúdo central -->
             <div class="central-content">
-              <h2>19.07.2025</h2>
+              <h2 class="data-evento">19.07.2025</h2>
+              <div class="linha-pontos-container">
+                <div class="linha-pontos">
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                  <span class="ponto"></span>
+                </div>
+              </div>
               <br />
               <h1>Aninha</h1>
               <div class="texto_aniversario">
@@ -144,9 +158,16 @@
           <h2 class="titulos_confirma">Festa</h2>
           <img clas="svg_coroa" src="./img/coroa baixa.svg" alt="coroa" />
           <h2 class="titulos_confirma">Dia</h2>
-          <h3 class="titulos_confirma_3">Sábado, 19 de Julho de 2025 - 19h</h3>
+          <p class="titulos_confirma_3">Sábado, 19 de Julho de 2025 - 19h</p>
+          <a
+            target="_blank"
+            href="https://calendar.app.google/gND7aQJcC1kjksEb8"
+            class="link-button"
+            download="evento.ics"
+            >Salvar na Agenda</a
+          >
           <h2 class="titulos_confirma">Local</h2>
-          <h3 class="titulos_confirma_3">Sitio das Flores</h3>
+          <p class="titulos_confirma_3">Sitio das Flores</p>
 
           <button class="link-button" onclick="openModal()">
             Confirmar Presença
@@ -191,14 +212,8 @@
           </div>
 
           <h2 class="titulos_confirma">Endereço</h2>
-          <a
-            target="_blank"
-            href="https://calendar.app.google/gND7aQJcC1kjksEb8"
-            class="link-button"
-            download="evento.ics"
-            >Salvar na Agenda</a
-          >
-          <h3 class="titulos_confirma_3">Linha Divisa - Porto Xavier</h3>
+
+          <p class="titulos_confirma_3">Linha Divisa - Porto Xavier</p>
           <a
             target="_blank"
             href="https://maps.app.goo.gl/jQUP6e9xaWsfpj9G7"
@@ -216,12 +231,10 @@
             Oi! Não sabe o que me dar de presente? Que tal algo bem fofinho na
             cor rosa? 💕
           </p>
-          <br />
           <p class="texto_presentes">
             E se ainda ficar na dúvida, um pix também me deixa super feliz! 🥰
           </p>
         </div>
-        <div class="svg-bottom"></div>
         <div class="pix-container">
           <h3>Faça seu pagamento via Pix</h3>
           <div class="qr-code">
@@ -235,6 +248,7 @@
             Código copiado!
           </p>
         </div>
+        <div class="svg-bottom"></div>
       </div>
     </div>
     <footer class="footer">
