@@ -68,11 +68,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-right: 7.5vw;
   gap: 5vw;
 }
 
 .foto-grande img {
-  height: 40vw;
+  height: 600px;
+  border-radius: 10px;
   object-fit: cover;
 }
 .texto h1 {
@@ -230,13 +232,17 @@ body {
 }
 
 .svg_festa {
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
 }
 
 .svg_coroa {
   height: 150px;
   width: 150px;
+}
+#svg_coroa_form {
+  height: 130px;
+  width: 130px;
 }
 
 .link-button {
@@ -419,11 +425,12 @@ input[type="text"] {
 .pix-container {
   display: block;
   text-align: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  padding: 10vh 0;
+  background-color: var(--color-pallete-4);
+  border: 1px solid var(--color-pallete-2);
   border-radius: 10px;
-  max-width: 400px;
+  max-width: 450px;
+  min-height: 70vh;
   margin: 6vh auto 6vh auto; /* margem superior e inferior aumentadas */
 }
 
@@ -600,8 +607,9 @@ button,
     width: 100vw;
   }
   .borda-container {
-    width: 70vw;
-    height: 90vw;
+    width: 90vw;
+    min-height: 90vw;
+    margin: 5vh 0 5vh 0;
   }
 
   .borda-modal {
@@ -616,6 +624,7 @@ button,
 
   .container {
     flex-direction: column;
+    padding-right: 0;
   }
   .foto-grande img {
     height: 300px;
@@ -623,8 +632,8 @@ button,
     border-radius: 10px;
   }
   .confirmacao {
-    width: 70vw;
-    margin-bottom: 5vh;
+    min-width: 90vw;
+    padding: 5vh 0;
   }
   .footer {
     font-size: 12px;
@@ -662,6 +671,10 @@ button,
     height: 50px;
     top: 10px;
     right: 10px;
+  }
+
+  .texto_presentes {
+    max-width: 90vw;
   }
 
   h1,

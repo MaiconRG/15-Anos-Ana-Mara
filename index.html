@@ -50,6 +50,7 @@
             <h1>Aninha</h1>
             <p>MEUS 15 ANOS</p>
             <img id="coroa_baixa" src="./img/coroa baixa.svg" />
+            <br />
             <p>A música de fundo faz parte da experiência</p>
             <br />
             <button class="btn_modal" id="btnSim">Sim, quero!</button>
@@ -93,6 +94,7 @@
 
             <!-- Conteúdo central -->
             <div class="central-content">
+              <br />
               <h2 class="data-evento">19.07.2025</h2>
               <div class="linha-pontos-container">
                 <div class="linha-pontos">
@@ -132,7 +134,7 @@
 
       <div class="countdown-container">
         <div class="svg-top"></div>
-        <h1 id="T_Contador">Faltam</h1>
+        <h1 id="T_Contador">Faltam!</h1>
         <div class="countdown">
           <div class="time-box">
             <span class="number_conter" id="days">0</span>
@@ -155,17 +157,22 @@
       </div>
       <div class="suporte_confimacao">
         <div class="confirmacao">
+          <br />
+          <img src="./img/coroa.svg" alt="Coroa" class="coroa" />
+
+          <br />
+          <br />
+          <h1>Festa</h1>
+
           <img
-            class="svg_festa"
-            src="./img/festa.svg"
-            alt="desenho de confetes"
+            id="svg_coroa_form"
+            clas="svg_coroa"
+            src="./img/coroa baixa.svg"
+            alt="coroa"
           />
-          <h2 class="titulos_confirma">Festa</h2>
-          <img clas="svg_coroa" src="./img/coroa baixa.svg" alt="coroa" />
-          <br />
-          <br />
           <h2 class="titulos_confirma">Dia</h2>
           <p class="titulos_confirma_3">Sábado, 19 de Julho de 2025 - 19h</p>
+          <br />
           <a
             target="_blank"
             href="https://calendar.app.google/gND7aQJcC1kjksEb8"
@@ -178,7 +185,7 @@
           <br />
           <h2 class="titulos_confirma">Local</h2>
           <p class="titulos_confirma_3">Sitio das Flores</p>
-
+          <br />
           <button class="link-button" onclick="openModal()">
             Confirmar Presença
           </button>
@@ -187,7 +194,12 @@
           <br />
           <div class="modal-overlay" id="modal">
             <div class="modal">
+              <img src="./img/coroa.svg" alt="Coroa" class="coroa" />
+
+              <br />
+              <br />
               <h1 class="modal_titulo">Você irá à festa?</h1>
+              <br />
               <form id="confirmationForm" autocomplete="off">
                 <label>
                   <input
@@ -205,6 +217,7 @@
                   />
                   Não posso :(
                 </label>
+                <br />
                 <input
                   type="text"
                   id="name"
@@ -226,6 +239,7 @@
           <h2 class="titulos_confirma">Endereço</h2>
 
           <p class="titulos_confirma_3">Linha Divisa - Porto Xavier</p>
+          <br />
           <a
             target="_blank"
             href="https://maps.app.goo.gl/jQUP6e9xaWsfpj9G7"
@@ -251,6 +265,8 @@
         </div>
         <div class="pix-container">
           <h3>Faça seu pagamento via Pix</h3>
+          <br />
+          <br />
           <div class="qr-code">
             <img src="./img/QR_Code_Exemplo.png" alt="QR Code Pix" />
           </div>
@@ -272,7 +288,9 @@
           reservados.
         </p>
         <p>Entre em contato com o Desenvolvedor</p>
-        <a href="https://wa.me/5549984321985" target="_blank">WhatsApp</a>
+        <a href="https://wa.me/5549984321985" target="_blank"
+          >Contato WhatsApp</a
+        >
       </div>
     </footer>
     <script src="script.js"></script>
