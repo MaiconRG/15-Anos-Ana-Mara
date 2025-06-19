@@ -94,6 +94,7 @@ body {
   margin-top: 12px;
   font-size: 1rem;
   max-width: 400px;
+  font-family: var(--fuente-2), sans-serif;
 }
 
 .texto {
@@ -205,7 +206,7 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: var(--braco);
-  border-radius: 10px; /* Cantos arredondados */
+  border-radius: 25px; /* Cantos arredondados */
   border: 5px dotted var(--rosa-forte); /* Cria a borda pontilhada */
 }
 
@@ -314,7 +315,7 @@ input[type="text"] {
 .btn_enviar {
   width: 100%;
   padding: 10px;
-  background-color: #28a745;
+  background-color: var(--rosa-forte);
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -325,7 +326,7 @@ input[type="text"] {
 }
 
 .btn_enviar:hover {
-  background-color: #218838;
+  background-color: var(--rosa);
 }
 
 .circle-button {
