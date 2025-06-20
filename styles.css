@@ -73,7 +73,8 @@ body {
 }
 
 .foto-grande img {
-  height: 600px;
+  height: 500px;
+  margin: 5vh 0;
   border-radius: 10px;
   object-fit: cover;
 }
