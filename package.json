@@ -1,0 +1,15 @@
+{
+  "name": "ana-mara-15-anos-",
+  "version": "1.0.0",
+  "description": "https://maiconrg.github.io/15-Anos-Ana-Mara/",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.0.3"
+  }
+}

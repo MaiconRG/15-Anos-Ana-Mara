@@ -26,7 +26,7 @@ async function sendMessage() {
 
   // Envia para o banco de dados (exemplo usando fetch para uma API)
   try {
-    await fetch("http://localhost:3000/", {
+    await fetch("http://localhost:3000/save-confirmation", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
