@@ -26,7 +26,7 @@ async function sendMessage() {
 
   // Envia para o banco de dados (exemplo usando fetch para uma API)
   try {
-    await fetch("http://localhost:3000/save-confirmation", {
+    await fetch("https://db-conect-ana.vercel.app/api/save-confirmation", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
