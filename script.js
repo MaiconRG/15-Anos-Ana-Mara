@@ -34,7 +34,6 @@ async function sendMessage() {
       body: JSON.stringify({ name, confirmation: selectedOption }),
     });
   } catch (error) {
-    alert("Erro ao salvar confirmação no banco de dados.");
     console.error(error);
     return;
   }
