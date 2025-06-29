@@ -519,7 +519,7 @@ input[type="text"] {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
+  min-height: 40vh;
 }
 
 .c_presentes {
@@ -594,6 +594,30 @@ button,
   font-size: clamp(1rem, 1.5vw, 1.1rem);
   line-height: 1.2;
   font-family: var(--fuente-2), sans-serif;
+}
+
+.lista-alinhada {
+  list-style: disc; /* Adiciona pontos */
+  padding-left: 20px; /* Define recuo para os itens */
+  margin: 2vh 0; /* Centraliza a lista no conteúdo principal */
+  text-align: left; /* Alinha os itens à esquerda */
+  max-width: 400px; /* Limita a largura da lista */
+  font-family: Arial, sans-serif; /* Define a fonte */
+  font-size: 16px; /* Define o tamanho do texto */
+}
+
+.lista-alinhada li {
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+.lista-alinhada a {
+  color: #4a90e2; /* Cor dos links */
+  text-decoration: none; /* Remove sublinhado */
+  transition: color 0.3s ease; /* Transição para hover */
+}
+
+.lista-alinhada a:hover {
+  color: #003366; /* Cor ao passar o mouse */
 }
 
 /* Responsividade: diminui o tamanho dos cantos em telas menores */

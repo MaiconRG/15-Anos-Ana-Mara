@@ -1,3 +1,53 @@
+// -------------------- MODAL DE CONFIRMAÇÃO --------------------
+const modal = document.getElementById("modal");
+
+function openModal() {
+  modal.classList.add("show");
+}
+
+function closeModal() {
+  modal.classList.remove("show");
+}
+
+async function sendMessage() {
+  const name = document.getElementById("name").value.trim();
+  const selectedRadio = document.querySelector(
+    'input[name="confirmation"]:checked'
+  );
+  const selectedOption = selectedRadio ? selectedRadio.value : "";
+
+  if (!name || !selectedOption) {
+    alert("Por favor, preencha todas as informações.");
+    return;
+  }
+
+  const message = `Olá, Obrigado pelo convite para a festa 15 anos da Ana!\nNome: ${name}\nConfirmação: ${selectedOption}`;
+  const phone = "+555581202442"; // Número do WhatsApp no formato internacional
+
+  // Envia para o banco de dados (exemplo usando fetch para uma API)
+  try {
+    await fetch("http://localhost:3000/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, confirmation: selectedOption }),
+    });
+  } catch (error) {
+    alert("Erro ao salvar confirmação no banco de dados.");
+    console.error(error);
+    return;
+  }
+
+  // Envia mensagem pelo WhatsApp
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
+    message
+  )}`;
+  window.open(whatsappLink, "_blank");
+
+  closeModal();
+}
+
 // -------------------- CONTADOR --------------------
 const targetDate = new Date("2025-07-19T19:30:00");
 const daysElement = document.getElementById("days");
@@ -31,40 +81,6 @@ function updateCountdown() {
 
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
-
-// -------------------- MODAL DE CONFIRMAÇÃO --------------------
-const modal = document.getElementById("modal");
-
-function openModal() {
-  modal.classList.add("show");
-}
-
-function closeModal() {
-  modal.classList.remove("show");
-}
-
-function sendMessage() {
-  const name = document.getElementById("name").value.trim();
-  const selectedRadio = document.querySelector(
-    'input[name="confirmation"]:checked'
-  );
-  const selectedOption = selectedRadio ? selectedRadio.value : "";
-
-  if (!name || !selectedOption) {
-    alert("Por favor, preencha todas as informações.");
-    return;
-  }
-
-  const message = `Olá, Obrigado pelo convite para a festa 15 anos da Ana!\nNome: ${name}\nConfirmação: ${selectedOption}`;
-  const phone = "+555581202442"; // Número do WhatsApp no formato internacional
-
-  const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(
-    message
-  )}`;
-  window.open(whatsappLink, "_blank");
-
-  closeModal();
-}
 
 // -------------------- POPUP DE MÚSICA --------------------
 const music = document.getElementById("backgroundMusic");
