@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ana Mara 15 Anos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="img/ana.ico" />
+  </head>
+  <body>
+    <ul id="lista"></ul>
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; 2025 - Desenvolvido por Maicon Gretschmann. Todos os direitos
+          reservados.
+        </p>
+        <p>Entre em contato com o Desenvolvedor</p>
+        <a href="https://wa.me/5549984321985" target="_blank"
+          >Contato WhatsApp</a
+        >
+      </div>
+    </footer>
+    <script>
+      // Consulta e exibe as confirmações direto no HTML
+      document.addEventListener("DOMContentLoaded", function () {
+        const lista = document.getElementById("lista");
+        if (lista) {
+          lista.innerHTML = "<li>Buscando confirmações...</li>";
+          fetch("https://db-conect-ana.vercel.app/api/save-confirmation")
+            .then((res) => res.json())
+            .then((data) => {
+              lista.innerHTML = "";
+              if (!Array.isArray(data) || data.length === 0) {
+                lista.innerHTML = "<li>Nenhuma confirmação encontrada.</li>";
+                return;
+              }
+              data.forEach((item) => {
+                const li = document.createElement("li");
+                li.innerHTML = `<strong>${item.name}</strong>: ${item.confirmation}`;
+                lista.appendChild(li);
+              });
+            })
+            .catch((err) => {
+              lista.innerHTML = `<li>Erro ao carregar confirmações: ${err.message}</li>`;
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
