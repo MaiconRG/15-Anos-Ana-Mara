@@ -68,14 +68,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding-right: 7.5vw;
   gap: 5vw;
 }
 
 .foto-grande img {
-  height: 500px;
-  margin: 5vh 0;
-  border-radius: 10px;
+  height: 400px;
+  margin: 10vh 0;
+  border-radius: 20px;
   object-fit: cover;
 }
 .texto h1 {
@@ -276,7 +275,9 @@ body {
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .modal-overlay.show {
@@ -352,7 +353,9 @@ input[type="text"] {
   right: 20px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   z-index: 1000;
 }
 
@@ -438,6 +441,7 @@ input[type="text"] {
   width: 200px;
   height: 200px;
   margin-bottom: 20px;
+  border-radius: 20px;
 }
 
 .pix-code-container {
@@ -459,7 +463,7 @@ input[type="text"] {
 .pix-code-container button {
   padding: 5px 10px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: var(--rosa-forte);
   color: white;
   border: none;
   border-radius: 5px;
@@ -468,7 +472,7 @@ input[type="text"] {
 }
 
 .pix-code-container button:hover {
-  background-color: #0056b3;
+  background-color: var(--rosa);
 }
 
 /* Footer */
@@ -655,8 +659,8 @@ button,
   }
   .foto-grande img {
     height: 300px;
-    margin-top: 5vh;
-    border-radius: 10px;
+    margin-top: 10vh;
+    border-radius: 100%;
   }
   .confirmacao {
     min-width: 90vw;
@@ -730,4 +734,15 @@ button,
   .btn_enviar {
     font-size: 0.95rem;
   }
+}
+
+.credits a {
+  text-decoration: none;
+  color: var(--cinza);
+  font-size: large;
+  line-height: 2;
+}
+
+.credits :hover {
+  color: var(--rosa-forte);
 }

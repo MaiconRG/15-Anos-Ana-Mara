@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -260,7 +260,6 @@
             Oi! Não sabe o que me dar de presente? Que tal algo bem fofinho na
             cor rosa? 💕
           </p>
-          <p>Também acho super legal algumas coisas como:</p>
           <br />
           <!-- Lista de sugestões de presentes -->
           <!--
@@ -300,8 +299,8 @@
             <img src="./img/QR_Code_Exemplo.png" alt="QR Code Pix" />
           </div>
           <div class="pix-code-container">
-            <span id="pixCode">55996861844</span>
-            <button id="copyButton">Copiar</button>
+            <span id="pixCode" style="display: none">55996861844</span>
+            <button id="copyButton">Copiar Codigo Pix</button>
           </div>
           <p id="copyMessage" style="display: none; color: green">
             Código copiado!
@@ -316,10 +315,13 @@
           &copy; 2025 - Desenvolvido por Maicon Gretschmann. Todos os direitos
           reservados.
         </p>
-        <p>Entre em contato com o Desenvolvedor</p>
-        <a href="https://wa.me/5549984321985" target="_blank"
-          >Contato WhatsApp</a
-        >
+        <p class="credits">
+          <a
+            href="https://portfoliomaicongretschmann.vercel.app/"
+            target="_blank"
+            >Acesse o Portfolio Completo</a
+          >
+        </p>
       </div>
     </footer>
     <script src="script.js"></script>
